@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insertion Sort Algorithm</title>
+</head>
+<body>
+   
+    <script>
+        
+function insertionSortAlgorithm1(data, length)
+{
+   for (i = 1; i < length; i++)
+  {
+     j = i;
+     while(data[j] < data[j-1] && j > 0)
+     {
+         //swap(data[j-1], data[j]);
+         temp = data[j];
+         data[j] = data[j-1];
+         data[j-1] = temp;
+
+         j--;
+     }
+  }
+}
+
+function DisplayAlgorithm(data, size)
+{
+    for(i = 0; i < size; i++)
+    {
+        document.write(data[i]+ " ");
+    }
+}
+
+//Rafiul Islam
+//Daffodil International University in CSE
+//01701-729512
+
+// var data = [64, 34, 25, 12, 22, 11, 90];
+var data = [5, 8, 6, 1, 7, 9];
+var length = data.length;
+var i, j;
+insertionSortAlgorithm1(data, length);
+DisplayAlgorithm(data, length);
+
+
+    </script>
+</body>
+</html>
