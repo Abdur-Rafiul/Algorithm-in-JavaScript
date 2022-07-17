@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selection Sort Algorithm</title>
+</head>
+
+<body>
+   <p>
+    Rafiul Islam<br>
+    Daffodil International University<br>
+    01701-729512<br>
+</p>
+<h4>Selection Sort Algorithm</h4>
+   
+<script type="text/javascript">
+
+function selectionSort(data, size)
+{
+    var minElement;
+    for(i = 0; i < size-1; i++)
+    {
+        minElement = i;
+        for(j = i+1; j < size; j++)
+        {
+
+            if(data[minElement] > data[j])
+            {
+                minElement = j;
+            }
+        }
+
+        
+        [data[i], data[minElement]] = [data[minElement], data[i]];
+    }
+}
+
+function displaySelectionSort(data, size)
+{
+    
+    i = 0;
+    while(size != i)
+    {
+      
+        document.write(data[i]+" ");
+      
+        i++;
+    }
+
+    document.write("<br>");
+
+}
+    //Rafiul Islam
+    //Daffodil International University
+    //01701-729512
+    var data = [7, 4, 5, 9, 8, 2, 1];
+    var i, j;
+    var size =  data.length;
+    document.write("Unsorted Data : ");
+    displaySelectionSort(data, size);
+    selectionSort(data, size);
+    document.write("Sorted Data : ");
+    displaySelectionSort(data, size);
+</script>
+</body>
+</html>
