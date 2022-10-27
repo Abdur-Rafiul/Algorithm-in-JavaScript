@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Linear Search</title>
+</head>
+
+<body>
+    <h3 style="color: red"></h3>
+
+    <script>
+        linearSearch = (arr, size, element) => {
+            if (size > 0) {
+                for (let i = 0; i <= size - 1; i++) {
+                    ///Rafiul Islam
+                    //Daffodil International University
+
+                    if (arr[i] == element) {
+                        return arr[i];
+                    }
+                }
+
+                return -1;
+            } else {
+                document.querySelector("h3").innerHTML = "Array is Empty!";
+
+                return 0;
+            }
+        };
+
+        let arr = [1, 3, 4, 5];
+
+        let size = arr.length;
+        console.log(size);
+        let element = 50;
+        let searchElement = linearSearch(arr, size, element);
+        if (searchElement == -1) {
+            document.querySelector("h3").innerHTML =
+                "The Number is " + element + " Not Found";
+        } else if (searchElement != 0) {
+            document.querySelector("h3").innerHTML =
+                "The Number is " + searchElement + " Found";
+        }
+    </script>
+</body>
+
+</html>
